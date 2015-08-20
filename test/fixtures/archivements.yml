@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: 1
-  memo: MyString
-
-two:
-  number: 1
-  memo: MyString
+  number: 400
+  memo: "初めての受験" 
