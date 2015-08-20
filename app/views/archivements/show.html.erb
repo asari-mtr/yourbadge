@@ -21,18 +21,10 @@
 </p>
 
 <p>
-  <strong>bronze medal:</strong>
-  <%= @medal.bronze %>
-</p>
-
-<p>
-  <strong>silver medal:</strong>
-  <%= @medal.silver %>
-</p>
-
-<p>
-  <strong>gold medal:</strong>
-  <%= @medal.gold %>
+  <strong>medal:</strong>
+  <%= image_tag 'bronze_toeic.png' if @medal.bronze %>
+  <%= image_tag 'silver_toeic.png' if @medal.silver %>
+  <%= image_tag 'gold_toeic.png' if @medal.gold %>
 </p>
 
 <%= link_to 'Edit', edit_archivement_path(@archivement) %> |

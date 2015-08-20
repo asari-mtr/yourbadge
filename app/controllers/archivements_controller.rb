@@ -16,9 +16,9 @@ class ArchivementsController < ApplicationController
   def show
     medal = Medal.new
 
-    medal.gold = @archivement.condition.gold < @archivement.number
-    medal.silver = @archivement.condition.silver < @archivement.number && !medal.gold
-    medal.bronze = @archivement.condition.bronze < @archivement.number && !medal.silver
+    medal.gold = @archivement.condition.gold <= @archivement.number
+    medal.silver = @archivement.condition.silver <= @archivement.number && !medal.gold
+    medal.bronze = @archivement.condition.bronze <= @archivement.number && !medal.silver && !medal.gold
 
     @medal = medal
   end
