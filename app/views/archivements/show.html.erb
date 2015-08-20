@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User name:</strong>
+  <%= @archivement.user.name %>
+</p>
+
+<p>
+  <strong>Condition name:</strong>
+  <%= @archivement.condition.name %>
+</p>
+
+<p>
   <strong>Number:</strong>
   <%= @archivement.number %>
 </p>
@@ -8,6 +18,21 @@
 <p>
   <strong>Memo:</strong>
   <%= @archivement.memo %>
+</p>
+
+<p>
+  <strong>bronze medal:</strong>
+  <%= @medal.bronze %>
+</p>
+
+<p>
+  <strong>silver medal:</strong>
+  <%= @medal.silver %>
+</p>
+
+<p>
+  <strong>gold medal:</strong>
+  <%= @medal.gold %>
 </p>
 
 <%= link_to 'Edit', edit_archivement_path(@archivement) %> |
