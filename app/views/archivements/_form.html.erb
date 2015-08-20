@@ -1,0 +1,25 @@
+<%= form_for(@archivement) do |f| %>
+  <% if @archivement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archivement.errors.count, "error") %> prohibited this archivement from being saved:</h2>
+
+      <ul>
+      <% @archivement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br>
+    <%= f.text_field :memo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

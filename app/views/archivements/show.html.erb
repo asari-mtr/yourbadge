@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @archivement.number %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @archivement.memo %>
+</p>
+
+<%= link_to 'Edit', edit_archivement_path(@archivement) %> |
+<%= link_to 'Back', archivements_path %>

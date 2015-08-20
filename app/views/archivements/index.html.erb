@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Archivements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Memo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archivements.each do |archivement| %>
+      <tr>
+        <td><%= archivement.number %></td>
+        <td><%= archivement.memo %></td>
+        <td><%= link_to 'Show', archivement %></td>
+        <td><%= link_to 'Edit', edit_archivement_path(archivement) %></td>
+        <td><%= link_to 'Destroy', archivement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archivement', new_archivement_path %>
