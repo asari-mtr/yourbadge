@@ -11,23 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :gold %><br>
-    <%= f.number_field :gold %>
-  </div>
-  <div class="field">
-    <%= f.label :silver %><br>
-    <%= f.number_field :silver %>
-  </div>
-  <div class="field">
-    <%= f.label :bronze %><br>
-    <%= f.number_field :bronze %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <%= f.label :name, :class => "col-md-2 control-label" %>
+      <%= f.text_field :name, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :gold, :class => "col-md-2 control-label" %>
+      <%= f.text_field :gold, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :silver, :class => "col-md-2 control-label" %>
+      <%= f.text_field :silver, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :bronze, :class => "col-md-2 control-label" %>
+      <%= f.text_field :bronze, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, :class => "col-md-2 control-label" %>
+      <%= f.text_field :description, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :image_name, :class => "col-md-2 control-label" %>
+      <%= f.text_field :image_name, :class => "co-md-10 form-control-static"%>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2">
+        <%= f.submit %>
+      </div>
+    </div>
   </div>
 <% end %>

@@ -1,5 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+one_toeic:
   number: 400
   memo: "初めての受験" 
+  user: asari
+  condition: toeic
+
+one_budget:
+  number: 200 
+  memo: "M社から" 
+  user: asari
+  condition: budget
+
+one_sales:
+  number: 90 
+  memo: "売り上げ" 
+  user: asari
+  condition: sales
+

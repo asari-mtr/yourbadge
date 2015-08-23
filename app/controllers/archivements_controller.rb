@@ -2,7 +2,7 @@ class ArchivementsController < ApplicationController
   before_action :set_archivement, only: [:show, :edit, :update, :destroy]
 
   class Medal
-      attr_accessor :gold, :silver, :bronze
+      attr_accessor :gold, :silver, :bronze, :none
   end
 
   # GET /archivements
@@ -19,6 +19,7 @@ class ArchivementsController < ApplicationController
     medal.gold = @archivement.condition.gold <= @archivement.number
     medal.silver = @archivement.condition.silver <= @archivement.number && !medal.gold
     medal.bronze = @archivement.condition.bronze <= @archivement.number && !medal.silver && !medal.gold
+    medal.none = !medal.bronze & !medal.silver && !medal.gold
 
     @medal = medal
   end

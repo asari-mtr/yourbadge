@@ -1,8 +1,35 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+toeic:
   name: TOEIC 
+  description: TOEIC受験したか
   gold: 800
+  gold_description: TOEICで800点以上取得
   silver: 400
+  silver_description: TOEICで400点以上取得
   bronze: 200
+  bronze_description: TOEICで200点以上取得
+  image_name: toeic
+
+sales:
+  name: 売り上げ 
+  description: 売り上げどうでしょう
+  gold: 100
+  gold_description: 月100万円越え
+  silver: 80
+  silver_description: 月80万越え
+  bronze: 60
+  bronze_description: 月60万越え
+  image_name: sales 
+
+budget:
+  name: 月売り上げ 
+  description: 月の売り上げどうでしょう
+  gold: 500 
+  gold_description: チームの月500万円越え
+  silver: 300
+  silver_description: チームの月300万越え
+  bronze: 100 
+  bronze_description: チームの月100万越え
+  image_name: budget
 
