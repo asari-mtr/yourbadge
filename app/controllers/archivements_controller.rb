@@ -1,10 +1,6 @@
 class ArchivementsController < ApplicationController
   before_action :set_archivement, only: [:show, :edit, :update, :destroy]
 
-  class Medal
-      attr_accessor :gold, :silver, :bronze, :none
-  end
-
   # GET /archivements
   # GET /archivements.json
   def index
@@ -14,14 +10,7 @@ class ArchivementsController < ApplicationController
   # GET /archivements/1
   # GET /archivements/1.json
   def show
-    medal = Medal.new
-
-    medal.gold = @archivement.condition.gold <= @archivement.number
-    medal.silver = @archivement.condition.silver <= @archivement.number && !medal.gold
-    medal.bronze = @archivement.condition.bronze <= @archivement.number && !medal.silver && !medal.gold
-    medal.none = !medal.bronze & !medal.silver && !medal.gold
-
-    @medal = medal
+    @medal = Medal.parse @archivement
   end
 
   # GET /archivements/new
