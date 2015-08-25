@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150822051126) do
 
-  create_table "archivements", force: :cascade do |t|
+  create_table "achievements", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "condition_id"
     t.integer  "number"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150822051126) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "archivements", ["condition_id"], name: "index_archivements_on_condition_id"
-  add_index "archivements", ["user_id"], name: "index_archivements_on_user_id"
+  add_index "achievements", ["condition_id"], name: "index_achievements_on_condition_id"
+  add_index "achievements", ["user_id"], name: "index_achievements_on_user_id"
 
   create_table "conditions", force: :cascade do |t|
     t.string   "name"

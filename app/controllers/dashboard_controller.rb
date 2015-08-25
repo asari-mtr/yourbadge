@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @archivements = Archivement.includes(:user).references(:user).where("users.name" => "asari")
+    @achievements = Achievement.includes(:user).references(:user).where("users.name" => "asari")
   end
 end

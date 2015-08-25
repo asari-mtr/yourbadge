@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-    has_many :archivements
+    has_many :achievements
 end

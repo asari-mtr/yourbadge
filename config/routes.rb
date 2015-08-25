@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :conditions
-  resources :archivements
+  resources :achievements
   resources :users
   resources :dashboard
   # The priority is based upon order of creation: first created -> highest priority.

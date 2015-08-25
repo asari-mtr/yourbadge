@@ -1,4 +1,4 @@
-<%- model_class = Archivement -%>
+<%- model_class = Achievement -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -15,19 +15,19 @@
     </tr>
   </thead>
   <tbody>
-    <% @archivements.each do |archivement| %>
+    <% @achievements.each do |achievement| %>
       <tr>
-        <td><%= link_to archivement.id, archivement_path(archivement) %></td>
-        <td><%= archivement.user_id %></td>
-        <td><%= archivement.condition_id %></td>
-        <td><%= archivement.number %></td>
-        <td><%= archivement.memo %></td>
-        <td><%=l archivement.created_at %></td>
+        <td><%= link_to achievement.id, achievement_path(achievement) %></td>
+        <td><%= achievement.user_id %></td>
+        <td><%= achievement.condition_id %></td>
+        <td><%= achievement.number %></td>
+        <td><%= achievement.memo %></td>
+        <td><%=l achievement.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_archivement_path(archivement), :class => 'btn btn-default btn-xs' %>
+                      edit_achievement_path(achievement), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      archivement_path(archivement),
+                      achievement_path(achievement),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -38,5 +38,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_archivement_path,
+            new_achievement_path,
             :class => 'btn btn-primary' %>

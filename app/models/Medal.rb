@@ -1,11 +1,11 @@
 class Medal
   attr_accessor :gold, :silver, :bronze, :none, :image_name
 
-  def self.parse(archivement)
+  def self.parse(achievement)
     medal = Medal.new
-    medal.gold = archivement.condition.gold <= archivement.number
-    medal.silver = archivement.condition.silver <= archivement.number && !medal.gold
-    medal.bronze = archivement.condition.bronze <= archivement.number && !medal.silver && !medal.gold
+    medal.gold = achievement.condition.gold <= achievement.number
+    medal.silver = achievement.condition.silver <= achievement.number && !medal.gold
+    medal.bronze = achievement.condition.bronze <= achievement.number && !medal.silver && !medal.gold
     medal.none = !medal.bronze & !medal.silver && !medal.gold
 
     kind = ""
@@ -16,7 +16,7 @@ class Medal
     if medal.none
       medal.image_name = "none.png"
     else
-      medal.image_name = kind + "_" + archivement.condition.image_name + ".png"
+      medal.image_name = kind + "_" + achievement.condition.image_name + ".png"
     end
     
     medal

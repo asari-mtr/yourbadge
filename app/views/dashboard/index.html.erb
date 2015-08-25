@@ -37,7 +37,7 @@
     </div>
     <% 1.times do |i| %>
     <div class="row">
-      <% @archivements.each do |i| %>
+      <% @achievements.each do |i| %>
       <div class="col-xs-3 col-sm-2 col-md-1">
           <%= image_tag(Medal.parse(i).image_name, :size => "80x80" ,:class => "thumbnail", :alt => i.condition.name) %>
       </div>
