@@ -7,8 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
+<div class="navbar">
+    <a class="navbar-brand" href="#">YourBadge</a>
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <%= link_to 'Dashboard', dashboards_path %>
+        </li>
+        <li class="active">
+            <%= link_to 'Condition', conditions_path %>
+        </li>
+        <li>
+            <%= link_to 'Achievement', achievements_path %>
+        </li>
+        <li>
+            <%= link_to 'User', users_path %>
+        </li>
+    </ul>
+</div>
+<div class="container">
     <%= yield %>
-  </div>
+</div>
 </body>
 </html>
