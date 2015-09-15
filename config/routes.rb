@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root :controller => 'dashboards', :action => 'index'
   resources :conditions
   resources :achievements
   resources :users
-  resources :dashboard
+  resources :dashboards, :only => [:index], :path => "dashboard"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

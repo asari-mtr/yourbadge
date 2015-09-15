@@ -40,7 +40,8 @@
       <% @achievements.each do |i| %>
       <div class="col-xs-3 col-sm-2 col-md-1">
           <%= image_tag(Medal.parse(i).image_name, :size => "80x80" ,:class => "thumbnail", :alt => i.condition.name) %>
-      </div>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_achievement_path(i), :class => 'btn btn-default btn-xs' %>      </div>
       <% end %>
     </div>
     <% end %>
