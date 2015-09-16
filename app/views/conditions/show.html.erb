@@ -1,29 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 control-label">Name:</label>
+                <div class="col-md-10 col-sm-10">
+                    <p class="form-control-static"><%= @condition.name %></p>
+                </div>
+            </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @condition.name %>
-</p>
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 control-label">Gold:</label>
+                <div class="col-md-10 col-sm-10">
+                    <p class="form-control-static"><%= @condition.gold %></p>
+                </div>
+            </div>
 
-<p>
-  <strong>Gold:</strong>
-  <%= @condition.gold %>
-</p>
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 control-label">Silver:</label>
+                <div class="col-md-10 col-sm-10">
+                    <p class="form-control-static"><%= @condition.silver %></p>
+                </div>
+            </div>
 
-<p>
-  <strong>Silver:</strong>
-  <%= @condition.silver %>
-</p>
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 control-label">Bronze:</label>
+                <div class="col-md-10 col-sm-10">
+                    <p class="form-control-static"><%= @condition.bronze %></p>
+                </div>
+            </div>
 
-<p>
-  <strong>Bronze:</strong>
-  <%= @condition.bronze %>
-</p>
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 control-label">Description:</label>
+                <div class="col-md-10 col-sm-10">
+                    <p class="form-control-static"><%= @condition.description %></p>
+                </div>
+            </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @condition.description%>
-</p>
-
-<%= link_to 'Edit', edit_condition_path(@condition) %> |
-<%= link_to 'Back', conditions_path %>
+            <%= link_to 'Edit', edit_condition_path(@condition) %> |
+            <%= link_to 'Back', conditions_path %>
+        </div>
+    </div>
+</div>
